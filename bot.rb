@@ -1,9 +1,8 @@
-#!/usr/bin/env ruby
-
 require 'chatroid'
 require 'twitter'
 require 'rest_client'
 require 'json'
+
 
 Chatroid.new do |config|
   set :service, 'Twitter'
@@ -12,7 +11,7 @@ Chatroid.new do |config|
   set :oauth_token, ENV['ACCESS_KEY']
   set :oauth_token_secret, ENV['ACCESS_SECRET']
 
-  on_time :hour => 23, :min => 32, :sec => 0 do
+  on_time :hour => 23, :min => 40, :sec => 0 do
     #morioka
     forecast_json =  RestClient.get 'http://weather.livedoor.com/forecast/webservice/json/v1?city=030010'
     forecast = JSON.parse(forecast_json)

@@ -1,4 +1,3 @@
-require 'chatroid'
 require 'twitter'
 require 'rest_client'
 require 'json'

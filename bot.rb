@@ -10,11 +10,11 @@ client = Twitter::REST::Client.new do |config|
 end
 
 #morioka
-forecast_json =  RestClient.get 'http://weather.livedoor.com/forecast/webservice/json/v1?city=030010'
-forecast = JSON.parse(forecast_json)
-forecast_morioka =  forecast["forecasts"][0]["telop"] + "で、最高気温は" + forecast["forecasts"][0]["temperature"]["max"]["celsius"] + "度"
-str = "今日の盛岡の天気は" + forecast_morioka + "です。"
-client.update str
+#forecast_json =  RestClient.get 'http://weather.livedoor.com/forecast/webservice/json/v1?city=030010'
+#forecast = JSON.parse(forecast_json)
+#forecast_morioka =  forecast["forecasts"][0]["telop"] + "で、最高気温は" + forecast["forecasts"][0]["temperature"]["max"]["celsius"] + "度"
+#str = "今日の盛岡の天気は" + forecast_morioka + "です。"
+#client.update str
 
 #tokyo
 forecast_json =  RestClient.get 'http://weather.livedoor.com/forecast/webservice/json/v1?city=130010'
